@@ -1,0 +1,33 @@
+{
+  "name": "projetprogweb",
+  "version": "0.0.1",
+  "description": "Projet de programmation web en 3MIC IR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always",
+    "printWidth": 80
+  },
+  "dependencies": {
+    "prettier": "^2.4.1",
+    "eslint-config-prettier": "^8.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shinyhero36/ProjetProgWeb.git"
+  },
+  "author": "Shinyhero36",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shinyhero36/ProjetProgWeb/issues"
+  },
+  "homepage": "https://github.com/Shinyhero36/ProjetProgWeb#readme"
+}
