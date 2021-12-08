@@ -1,0 +1,62 @@
+:root {
+  --radius: 10px;
+  --font-small: 0.875rem;
+  --font-medium: 1.125rem;
+  --font-large: 1.5rem;
+  --font-larger: 1.75rem;
+}
+
+main {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-header > h2 {
+  font-size: var(--font-larger);
+}
+
+.section-header > p {
+  font-size: var(--font-medium);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game {
+  text-align: center;
+  margin: 1rem;
+}
+
+.game-image > img {
+  border-radius: var(--radius);
+}
+
+.game-info > p:first-child {
+  font-weight: bold;
+  font-size: var(--font-medium);
+  margin-bottom: 0;
+}
+
+.game-info > p:last-child {
+  margin-top: 0;
+}
+
+/* Tablette */
+@media (max-width: 768px) {
+  main {
+    width: 90% !important;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 640px) {
+}
