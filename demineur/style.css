@@ -1,0 +1,56 @@
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+#game main{
+    overflow-x: auto;
+}
+#game header,
+#game footer{
+    text-align: center;
+}
+#game table {
+    margin: auto;
+}
+#game button{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-weight: bold;
+    font-size: larger;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+}
+
+#game .case-1{
+    color: darkblue;
+}
+#game .case-2{
+    color: darkgreen;
+}
+#game .case-3{
+    color: darkgoldenrod;
+}
+#game .case-4{
+    color: darkred;
+}
+#game .case-5,
+#game .case-6,
+#game .case-7,
+#game .case-8{
+    color: darkmagenta;
+}
+#game .case-B{
+    color: black;
+    background-color: darkgray;
+}
+#game .case-B-fail{
+    color: black;
+    background-color: lightcoral;
+}
+#game .case-F{
+    color: black;
+    background-color: lightblue;
+}
