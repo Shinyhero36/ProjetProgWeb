@@ -1,5 +1,22 @@
 # Projet Prog Web
 
+## Must have...
+- [x] String object
+- [x] Functions
+- [x] Conditional Statements
+- [ ] Loops
+  - [x] While
+  - [ ] For ... in ...
+  - [x] For ... of ...
+- [x] Arrays
+- [x] JavaSript validation
+- [ ] Prototype and user-defined objects >> CLASS
+- [x] DOM manipulation
+  - [x] Addition of HTML elements
+  - [x] Removal of HTML elements
+  - [x] Update of HTML elements
+- [x] Online hosting
+
 ## How to contribute ?
 
 - Start by making a fork of my repo
