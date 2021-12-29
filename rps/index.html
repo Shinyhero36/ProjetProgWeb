@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Projet Web | Pierre Feuille Ciseaux</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://picsum.photos/50?random=0"
+    />
+    <style>
+      section > div {
+        text-align: center;
+      }
+
+      .scores {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .scores > div:first-child {
+        text-align: right;
+      }
+
+      .scores > div:last-child {
+        text-align: left;
+      }
+
+      #selection button {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      #result > span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <a href="../">Projet Web</a>
+        <nav>
+          <a href="../morpion">Morpion</a>
+          <a href="../demineur">Démineur</a>
+          <a href="../taquin">Taquin</a>
+          <a href="../2048">2048</a>
+          <a href="./rps">Pierre-Feuille-Ciseaux</a>
+        </nav>
+      </header>
+
+      <section>
+        <div>
+          <div class="section-header">
+            <h2>Pierre-Feuille-Ciseaux</h2>
+          </div>
+          <div>
+            <!-- INSERT GAME HERE -->
+            <div class="scores">
+              <div>
+                <span>Moi:</span>
+                <span id="me"></span>
+              </div>
+              <div>
+                <span>Bot:</span>
+                <span id="bot"></span>
+              </div>
+            </div>
+            <div id="selection">
+              <button onclick="onSelection(0)">👊</button>
+              <button onclick="onSelection(1)">✋</button>
+              <button onclick="onSelection(2)">✌</button>
+            </div>
+            <div id="result">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

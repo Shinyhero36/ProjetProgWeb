@@ -1,0 +1,138 @@
+:root {
+  --radius: 10px;
+  --font-small: 0.875rem;
+  --font-medium: 1.125rem;
+  --font-large: 1.5rem;
+  --font-larger: 1.75rem;
+  --accent: #000000;
+}
+
+div#app {
+  width: 65%;
+  margin: 0 auto;
+}
+
+header {
+  top: 0;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top Bar Logo */
+header > a {
+  font-weight: bolder;
+  font-size: var(--font-larger);
+  color: inherit;
+  flex-shrink: 0;
+}
+
+header > a:visited {
+  color: inherit;
+}
+
+header > a:hover {
+  color: var(--accent);
+}
+
+/* Top Bar Items */
+header > nav {
+  gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header > nav > a {
+  font-size: var(--font-medium);
+  font-weight: 600;
+  color: inherit;
+}
+
+header > nav > a:first-child {
+  margin-left: 1rem;
+}
+
+header > nav > a:hover,
+header > nav > a:active {
+  color: var(--accent);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+section a {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+div#app {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.section-header > h2 {
+  font-size: var(--font-larger);
+}
+
+.section-header > p {
+  font-size: var(--font-medium);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game {
+  text-align: center;
+  margin: 1rem;
+}
+
+.game-image > img {
+  border-radius: var(--radius);
+}
+
+.game-info > p:first-child {
+  font-weight: bold;
+  font-size: var(--font-medium);
+  margin-bottom: 0;
+}
+
+.game-info > p:last-child {
+  margin-top: 0;
+}
+
+/* Tablette */
+@media (max-width: 768px) {
+  div#app {
+    width: 90%;
+  }
+
+  header {
+    justify-content: center;
+    flex-wrap: wrap;
+
+    position: initial;
+    top: initial;
+    width: initial;
+  }
+
+  .section-header > p {
+    width: auto;
+  }
+}
