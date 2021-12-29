@@ -1,27 +1,68 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <title>Title</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <form>
-    <div>
-      <label>Grille : </label>
-      <input type="number" name="grid-L" value="15" min="5" max="100">
-      <span>X</span>
-      <input type="number" name="grid-H" value="10" min="5" max="100">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projet Web | Démineur</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://picsum.photos/50?random=0"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <a href="../">Projet Web</a>
+        <nav>
+          <a href="../morpion">Morpion</a>
+          <a href="./demineur">Démineur</a>
+          <a href="../taquin">Taquin</a>
+          <a href="../2048">2048</a>
+          <a href="../rps">Pierre-Feuille-Ciseaux</a>
+        </nav>
+      </header>
+
+      <section>
+        <div>
+          <div class="section-header">
+            <h2>Démineur</h2>
+          </div>
+          <div>
+            <form>
+              <div>
+                <label>Grille : </label>
+                <input
+                  type="number"
+                  name="grid-L"
+                  value="15"
+                  min="5"
+                  max="100"
+                />
+                <span>X</span>
+                <input
+                  type="number"
+                  name="grid-H"
+                  value="10"
+                  min="5"
+                  max="100"
+                />
+              </div>
+              <div>
+                <span>Difficulté : </span>
+                <input type="number" name="grid-D" value="3" min="1" max="10" />
+              </div>
+              <div>
+                <input type="submit" value="Nouvelle Partie" />
+              </div>
+            </form>
+            <div id="game"></div>
+          </div>
+        </div>
+      </section>
     </div>
-    <div>
-      <span>Difficulté : </span>
-      <input type="number" name="grid-D" value="3" min="1" max="10">
-    </div>
-    <div>
-      <input type="submit" value="Nouvelle Partie">
-    </div>
-  </form>
-  <div id='game'></div>
-  <script type="text/javascript" src="script.js"></script>
-</body>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
