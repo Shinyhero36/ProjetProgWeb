@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Projet Web | 2048</title>
     <link
       rel="icon"
@@ -29,10 +30,28 @@
             <h2>2048</h2>
           </div>
           <div>
-            <!-- INSERT GAME HERE -->
+            <div class="hud">
+              <label for="taille">Taille de la grille: </label>
+              <input type="number" id="taille" value="4" max="10" min="2" />
+              <!-- à changer pour adapter la taille au nombre du tab -->
+              <button id="StartBTN" class="StartButton">Start</button>
+            </div>
+
+            <table id="Main"></table>
+
+            <div class="score">
+              <br />
+              <span>Tour : </span>
+              <span id="nbTourTXT"></span>
+              <br />
+              <span>Score : </span>
+              <span id="scoreTXT">0</span>
+              <br />
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
