@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../global.css" />
     <title>Projet Web | Pierre Feuille Ciseaux</title>
     <link
       rel="icon"
@@ -15,7 +15,7 @@
       }
 
       .scores {
-        display: flex;
+        display: grid;
         justify-content: space-around;
       }
 
@@ -59,12 +59,16 @@
             <!-- INSERT GAME HERE -->
             <div class="scores">
               <div>
-                <span>Moi:</span>
-                <span id="me"></span>
+                <h4>
+                  Moi:
+                  <span id="me"></span>
+                </h4>
               </div>
               <div>
-                <span>Bot:</span>
-                <span id="bot"></span>
+                <h4>
+                  Bot:
+                  <span id="bot"></span>
+                </h4>
               </div>
             </div>
             <div id="selection">

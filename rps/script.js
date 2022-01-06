@@ -5,6 +5,7 @@ let winsBot;
 // DOM elements
 const winsMeDOM = document.querySelector('#me');
 const winsBotDOM = document.querySelector('#bot');
+const resultDOM = document.querySelector('#result');
 const resultSpanDOM = document.querySelector('#result>span:first-child');
 const choicesSpanDOM = document.querySelector('#result>span:last-child');
 
@@ -17,10 +18,20 @@ const CHOIX = [PIERRE, FEUILLE, CISEAUX];
 let choixJoueur = null;
 let choixBot = null;
 
+/**
+ * Render scores in the DOM
+ */
 function renderScores() {
   winsMeDOM.innerText = winsMe;
   winsBotDOM.innerText = winsBot;
+
+  // Hide game results after 1 sec
+  setTimeout(() => {
+    resultDOM.style.display = 'none';
+  }, 1000);
+  resultDOM.style.display = 'block';
 }
+
 /**
  * Randomly choose between rock, paper, scissors
  * @returns {string}
