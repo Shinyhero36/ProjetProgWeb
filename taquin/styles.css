@@ -1,0 +1,66 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  margin: 0 0 50px 0;
+  text-align: center;
+  color: black;
+}
+
+.melange {
+  color: black;
+  font-size: medium;
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+#score {
+  color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 5px 15px 5px 5px;
+}
+
+#jeu {
+  color: navy;
+  text-align: center;
+}
+
+.piece {
+  width: 80px;
+  height: 80px;
+  font-size: 1cm;
+  font-weight: bold;
+}
+
+.oui {
+  background-color: white;
+  color: black;
+}
+
+.non {
+  background-color: white;
+  color: white;
+}
+
+#controle {
+  text-align: center;
+  margin: 5px;
+}
+
+.console {
+  text-align: center;
+  color: maroon;
+  margin: 5px;
+  font-size: larger;
+}
+
+#console .fini {
+  color: black;
+}
+.vert {
+  background-color: #6f6;
+}
