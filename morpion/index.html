@@ -2,37 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../global.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://picsum.photos/50?random=0"
-    />
-    <title>Projet Web | Morpion</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morpion</title>
+    <style>
+      img {
+        justify-content: center;
+      }
+      button {
+        justify-content: center;
+      }
+      .ini1,
+      button {
+        justify-content: left;
+      }
+      .ini2,
+      button {
+        justify-content: right;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <a href="../">Projet Web</a>
-        <nav>
-          <a href="./morpion">Morpion</a>
-          <a href="../demineur">Démineur</a>
-          <a href="../taquin">Taquin</a>
-          <a href="../2048">2048</a>
-          <a href="../rps">Pierre-Feuille-Ciseaux</a>
-        </nav>
-      </header>
+    <h1 id="cercle"></h1>
+    <h1 id="croix"></h1>
+    <button alt="1 PLAYER" class="ini1" id="ButtonSolo"></button>
+    <button alt="2 PLAYERS" class="ini2" id="ButtonMulti"></button>
 
-      <section>
-        <div>
-          <div class="section-header">
-            <h2>Morpion</h2>
-          </div>
-          <div>
-            <!-- INSERT GAME HERE -->
-          </div>
-        </div>
-      </section>
-    </div>
+    <script src="morpion.js"></script>
   </body>
 </html>

@@ -22,6 +22,11 @@ function updateTab(TabARecop) {
       const Cell = document.createElement('TD');
       if (TabARecop[i][j] !== 0) {
         Cell.innerText = TabARecop[i][j];
+        if (TabARecop[i][j] < 128) {
+          Cell.classList.add('in-' + TabARecop[i][j]);
+        } else {
+          Cell.classList.add('in-128');
+        }
       }
       Row.appendChild(Cell);
     }

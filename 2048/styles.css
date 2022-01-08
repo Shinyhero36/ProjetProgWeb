@@ -1,5 +1,5 @@
 td {
-  background-color: rgb(216, 142, 0);
+  background-color: gray;
   border-radius: 7px;
   text-align: center;
   font: bold 30px Georgia, serif;
@@ -21,6 +21,34 @@ table {
 .score {
   text-align: center;
   font: 30px Georgia, serif;
+}
+
+.in-2 {
+  background-color: yellow;
+}
+
+.in-4 {
+  background-color: goldenrod;
+}
+
+.in-8 {
+  background-color: orangered;
+}
+
+.in-16 {
+  background-color: orangered;
+}
+
+.in-32 {
+  background-color: indianred;
+}
+
+.in-64 {
+  background-color: palevioletred;
+}
+
+.in-128 {
+  background-color: violet;
 }
 
 .StartButton {
