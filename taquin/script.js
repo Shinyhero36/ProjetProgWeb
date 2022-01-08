@@ -11,9 +11,8 @@ function afficherSurConsole(html, style) {
 }
 
 function actualiserPieces() {
-  let li, co;
-  for (li = 0; li < 4; li += 1) {
-    for (co = 0; co < 4; co += 1) {
+  for (let li = 0; li < 4; li += 1) {
+    for (let co = 0; co < 4; co += 1) {
       taquinPiece[li][co].innerHTML = String(taquinNumero[li][co]);
       taquinPiece[li][co].className =
         'piece' + (taquinNumero[li][co] === 0 ? ' non' : ' oui');
@@ -22,9 +21,8 @@ function actualiserPieces() {
 }
 
 function ajouterTDcaseA(noeud, li, co) {
-  let element, bouton;
-  element = document.createElement('td');
-  bouton = document.createElement('button');
+  let element = document.createElement('td');
+  let bouton = document.createElement('button');
   bouton.setAttribute('onclick', 'clicPiece(' + li + ',' + co + ')');
   element.appendChild(bouton);
   noeud.appendChild(element);
@@ -32,14 +30,14 @@ function ajouterTDcaseA(noeud, li, co) {
 }
 
 function initJeu() {
-  let li, co, dom_table, dom_tody, dom_tr;
-  dom_table = document.createElement('table');
+  let dom_table = document.createElement('table');
   dom_table.setAttribute('align', 'center');
   dom_table.setAttribute('cellspacing', '0');
   dom_table.setAttribute('border', '0');
   dom_table.setAttribute('cellpadding', '0');
   dom_jeu.appendChild(dom_table);
-  dom_tody = document.createElement('tbody');
+
+  let dom_tody = document.createElement('tbody');
   dom_table.appendChild(dom_tody);
   taquinPiece = [
     [null, null, null, null],
@@ -57,23 +55,53 @@ function initJeu() {
   coVide = 3;
   melangeEnCours = false;
   horsJeu = true;
-  for (li = 0; li < 4; li += 1) {
-    dom_tr = document.createElement('tr');
+  for (let li = 0; li < 4; li += 1) {
+    let dom_tr = document.createElement('tr');
     dom_tody.appendChild(dom_tr);
-    for (co = 0; co < 4; co += 1) {
+    for (let co = 0; co < 4; co += 1) {
       ajouterTDcaseA(dom_tr, li, co);
     }
   }
   actualiserPieces();
 }
 
+function verifierSolution() {
+  let n = 0;
+  for (let li = 0; li < 4; li += 1) {
+    for (let co = 0; co < 4; co += 1) {
+      if (taquinNumero[li][co] === 4 * li + co + 1) {
+        n += 1;
+      }
+    }
+  }
+  if (n === 15) {
+    afficherSurConsole(
+      '• &nbsp; • &nbsp; • &nbsp; Bravo ! &nbsp; Solution en ' +
+        score +
+        ' Clics  &nbsp; • &nbsp; • &nbsp; •',
+      'fini'
+    );
+    document.body.className = 'vert';
+  } else {
+    afficherSurConsole(
+      'Clic n° ' +
+        score +
+        ' &nbsp; ' +
+        n +
+        (n > 1 ? ' pièces bien placés' : ' pièce bien placée')
+    );
+    document.body.className = null;
+  }
+}
+
 function bougerPiecesPour(li, co) {
-  let k, s, dk;
+  let s, dk;
   if (li === liVide && co === coVide) {
+    // return;
   } else if (li === liVide) {
     dk = co - coVide;
     s = dk < 0 ? -1 : 1;
-    for (k = 0; k < s * dk; k += 1) {
+    for (let k = 0; k < s * dk; k += 1) {
       taquinNumero[li][coVide + s * k] = taquinNumero[li][coVide + s * (k + 1)];
     }
     taquinNumero[li][coVide + dk] = 0;
@@ -81,12 +109,24 @@ function bougerPiecesPour(li, co) {
   } else if (co === coVide) {
     dk = li - liVide;
     s = dk < 0 ? -1 : 1;
-    for (k = 0; k < s * dk; k += 1) {
+    for (let k = 0; k < s * dk; k += 1) {
       taquinNumero[liVide + s * k][co] = taquinNumero[liVide + s * (k + 1)][co];
     }
     taquinNumero[liVide + dk][co] = 0;
     liVide = li;
+  } else {
+    // return;
   }
+}
+
+function clicPiece(li, co) {
+  if (melangeEnCours || horsJeu) {
+    return;
+  }
+  score += 1;
+  bougerPiecesPour(li, co);
+  actualiserPieces();
+  verifierSolution();
 }
 
 function melanger() {
